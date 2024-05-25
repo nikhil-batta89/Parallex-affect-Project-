@@ -1,0 +1,115 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#wrapper
+{
+   height: 100vh;
+   overflow-y: auto;
+   overflow-x: hidden;
+   perspective: 10px;
+}
+/* relative : postion the element relative to its normal position and will leave a gap its normal position */
+/* absolute : postion the element relative to the postion of its first parent 
+Absolute positioned elements are removed from the normal flow, and can overlap elements.*/
+/* fixed  :  postion the element relative to the browser window */
+/*Sticky : when a scoll , you can see it's stuck above . it stuck there and it makes  no different i scroll*/
+
+.container
+{
+  position: relative;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform-style: preserve-3d; /* 3d use kiya usko hata nahi ha  to use kar rahe ha preserve -3d */
+  z-index: -1; /*z - index means -1 menas one image below another image also below text to see the browser*/
+}
+
+.background
+{
+    transform: translateZ(-40px) scale(6);
+}
+.foreground
+{
+    transform: translateZ(-20px) scale(3);
+}
+.background , .foreground
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* object fit property will be do  img or video should be resized to fit its container*/
+   z-index: -1;
+}
+
+h1
+{
+  position: absolute;
+  top: 5rem;
+  /* left:50%; */
+  font-size: 10rem;
+  letter-spacing: 4px;
+  color: white;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+section
+{
+  background-color: rgb(45,45,45);
+  color: white;
+  padding: 1rem 0;
+}
+
+.bg1
+{
+    background-image: url(sport-1.jpg);
+}
+
+.bg2
+{
+    background-image: url(sport-2.jpg);
+}
+
+.bg3
+{
+    background-image: url(sport-3.jpg);
+}
+
+.secheading
+{
+    font-size: 5rem;
+    padding:  0 10rem;
+}
+
+.text
+{
+    font-size: 1.5rem;
+    padding: 0 10rem;
+    margin: 5rem 0;
+}
+
+.bg
+{
+    position: relative;
+    width: 100%;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+}
+
+.desc 
+{
+    position: absolute;
+    background-color: white;
+    position: 0.5rem 2.5rem;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateX(-50%);
+   color: black;
+   font-size: 3.5rem;
+   font-weight:600;
+}
